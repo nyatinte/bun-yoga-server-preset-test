@@ -6,6 +6,9 @@
     "check": "bun test",
     "start": "bun src/index.ts"
   },
+  "prisma": {
+    "seed": "bun prisma/seed.ts"
+  },
   "dependencies": {
     "@prisma/client": "^5.3.1",
     "bun-types": "^1.0.0",
@@ -14,7 +17,9 @@
   },
   "devDependencies": {
     "@eddeee888/gcg-typescript-resolver-files": "^0.7.1",
+    "@faker-js/faker": "^8.1.0",
     "@graphql-codegen/cli": "^5.0.0",
+    "@types/faker": "^6.6.9",
     "@whatwg-node/fetch": "^0.9.0",
     "prisma": "^5.3.1"
   }

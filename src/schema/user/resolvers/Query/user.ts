@@ -5,7 +5,7 @@ export const user: NonNullable<QueryResolvers['user']> = async (
   { id },
   { prisma }
 ) => {
-  const user = prisma.user.findUniqueOrThrow({ where: { id } });
+  const user = await prisma.user.findUnique({ where: { id } });
 
   return {
     __typename: 'User',

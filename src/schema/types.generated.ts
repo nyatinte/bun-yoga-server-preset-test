@@ -42,6 +42,7 @@ export type Query = {
   __typename?: 'Query';
   post?: Maybe<Post>;
   user: User;
+  users: Array<User>;
 };
 
 
@@ -168,6 +169,7 @@ export type PostResolvers<ContextType = GraphQLContext, ParentType extends Resol
 export type QueryResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
   post?: Resolver<Maybe<ResolversTypes['Post']>, ParentType, ContextType, RequireFields<QuerypostArgs, 'id'>>;
   user?: Resolver<ResolversTypes['User'], ParentType, ContextType, RequireFields<QueryuserArgs, 'id'>>;
+  users?: Resolver<Array<ResolversTypes['User']>, ParentType, ContextType>;
 };
 
 export type UserResolvers<ContextType = GraphQLContext, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {

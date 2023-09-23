@@ -1,8 +1,13 @@
-extend type Query {
-  user(id: ID!): User!
-}
 type User {
   id: ID!
   fullName: String!
   posts: [Post!]!
+}
+
+extend type Query {
+  user(id: ID!): User!
+}
+
+extend type Query {
+  users: [User!]!
 }

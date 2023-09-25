@@ -5,7 +5,7 @@
   "scripts": {
     "check": "bun test",
     "start": "bun src/index.ts",
-    "setup": "cp .env.develop .env && bunx prisma migrate dev --name init && bunx prisma db seed"
+    "setup": "bun install && cp .env.develop .env && bunx prisma migrate dev --name init && bunx prisma db seed"
   },
   "prisma": {
     "seed": "bun prisma/seed.ts"

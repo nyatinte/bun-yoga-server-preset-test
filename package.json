@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "check": "bun test",
-    "start": "bun src/index.ts",
+    "start": "bun --watch src/index.ts",
     "setup": "bun install && cp .env.develop .env && bunx prisma migrate dev --name init && bunx prisma db seed"
   },
   "prisma": {
